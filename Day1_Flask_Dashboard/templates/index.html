@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart Vehicle Dashboard</title>
+
+    <style>
+
+        body{
+            background-color:#111;
+            color:white;
+            text-align:center;
+            font-family:Arial;
+        }
+
+        .card{
+            background:#222;
+            padding:40px;
+            margin:100px auto;
+            width:400px;
+            border-radius:20px;
+        }
+
+        h1{
+            color:cyan;
+        }
+
+        .distance{
+            font-size:50px;
+        }
+
+        .status{
+            font-size:35px;
+            color:red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>EV ADAS Dashboard</h1>
+
+        <p class="distance">
+            {{distance}} cm
+        </p>
+
+        <p class="status">
+            {{status}}
+        </p>
+
+    </div>
+
+</body>
+
+</html>
