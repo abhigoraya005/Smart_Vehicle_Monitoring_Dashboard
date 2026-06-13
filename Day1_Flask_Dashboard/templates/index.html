@@ -5,10 +5,12 @@
 
     <title>Smart Vehicle Dashboard</title>
 
+    <meta http-equiv="refresh" content="2">
+
     <style>
 
         body{
-            background-color:#111;
+            background:#111;
             color:white;
             text-align:center;
             font-family:Arial;
@@ -17,9 +19,10 @@
         .card{
             background:#222;
             padding:40px;
-            margin:100px auto;
-            width:400px;
+            margin:80px auto;
+            width:450px;
             border-radius:20px;
+            box-shadow:0px 0px 20px cyan;
         }
 
         h1{
@@ -27,11 +30,24 @@
         }
 
         .distance{
-            font-size:50px;
+            font-size:60px;
+            margin-top:30px;
         }
 
         .status{
-            font-size:35px;
+            font-size:40px;
+            margin-top:20px;
+        }
+
+        .safe{
+            color:lime;
+        }
+
+        .warning{
+            color:yellow;
+        }
+
+        .danger{
             color:red;
         }
 
@@ -43,15 +59,31 @@
 
     <div class="card">
 
-        <h1>EV ADAS Dashboard</h1>
+        <h1>EV Smart Vehicle Dashboard</h1>
 
-        <p class="distance">
+        <div class="distance">
             {{distance}} cm
-        </p>
+        </div>
 
-        <p class="status">
-            {{status}}
-        </p>
+        {% if status == "SAFE" %}
+
+            <div class="status safe">
+                SAFE
+            </div>
+
+        {% elif status == "WARNING" %}
+
+            <div class="status warning">
+                WARNING
+            </div>
+
+        {% else %}
+
+            <div class="status danger">
+                DANGER
+            </div>
+
+        {% endif %}
 
     </div>
 
